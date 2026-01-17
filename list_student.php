@@ -14,33 +14,71 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Danh sách sinh viên</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 30px;
         }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
         table {
+            width: 100%;
+            max-width: 900px;
             border-collapse: collapse;
-            width: 80%;
-            margin-top: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        table, th, td {
-            border: 1px solid #333;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
+
         th {
-            background-color: #f2f2f2;
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 14px;
+            padding: 12px;
         }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
         a {
             text-decoration: none;
-            margin-right: 10px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
         }
+
         .edit {
-            color: blue;
+            background-color: #3498db;
+            color: white;
         }
+
+        .edit:hover {
+            background-color: #2980b9;
+        }
+
         .delete {
-            color: red;
+            background-color: #e74c3c;
+            color: white;
         }
+
+        .delete:hover {
+            background-color: #c0392b;
+        }
+
     </style>
 </head>
 <body>
